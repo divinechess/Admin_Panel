@@ -1,0 +1,77 @@
+/* ---------- HEADER ---------- */
+.header{
+    grid-area: h;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 6px 10px -3px rgba(0, 0, 0, 0.45);
+
+}
+
+
+
+/* ---------- CARD SECTION ---------- */
+.card-container {
+    grid-area: c;
+    overflow-y: auto;
+    padding: 20px 20px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.card:first-child {
+    background-color: #2962ff;
+}
+
+.card:nth-child(2) {
+    background: #ff6d00;
+}
+
+.card:nth-child(3) {
+    background-color: #2e7d32;
+}
+
+.card:nth-child(4) {
+    background-color: #d50000;
+}
+
+
+
+/* ---------- MAIN GRID LAYOUT ---------- */
+.grid-container{
+    display:grid;
+    grid-template:repeat(3, 75px 300px 70px) / repeat(12, 1fr);
+
+    background-color: #3012f2;
+    grid-template-areas:
+"h h h h h h h h h h h h"
+"c c c c c c c c c c c c"
+"f f f f f f f f f f f f";
+}
+
+
+
+.card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+
